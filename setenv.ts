@@ -8,7 +8,7 @@ const stackConfig = {
   api_key: process.env.CONTENTSTACK_API_KEY,
   delivery_token: process.env.CONTENTSTACK_DELIVERY_TOKEN,
   environment: process.env.CONTENTSTACK_ENVIRONMENT,
-  region: process.env.CONTENTSTACK_REGION || 'us',
+  region: process.env.CONTENTSTACK_REGION || 'eu',
 };
 const environmentFileContent = `
 export const environment = {
@@ -19,7 +19,7 @@ export const Config = {
   api_key: '${process.env.CONTENTSTACK_API_KEY}',
   delivery_token: '${process.env.CONTENTSTACK_DELIVERY_TOKEN}',
   environment: '${process.env.CONTENTSTACK_ENVIRONMENT}',
-  region: '${process.env.CONTENTSTACK_REGION || 'us'}',
+  region: '${process.env.CONTENTSTACK_REGION || 'eu'}',
   management_token:'${process.env.CONTENTSTACK_MANAGEMENT_TOKEN}',
   api_host:'${process.env.CONTENTSTACK_API_HOST}',
   app_host:'${process.env.CONTENTSTACK_APP_HOST}',
