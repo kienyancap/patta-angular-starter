@@ -23,6 +23,8 @@ import { StoreModule } from '@ngrx/store';
 import { stateReducer } from './store/reducers/state.reducer';
 import { DevtoolsComponent } from './components/devtools/devtools.component';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
+import { ProductListComponent } from './components/modular-block/product-list/product-list.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
     TeamComponent,
     SanitizeHtmlPipe,
     DevtoolsComponent,
+    ProductListComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,10 +57,10 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000',
     }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

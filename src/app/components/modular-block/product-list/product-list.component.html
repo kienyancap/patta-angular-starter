@@ -1,0 +1,16 @@
+<div *ngIf="(product | json) != '{}'">
+  <div *ngFor="let product of product.products" class="product-content">
+    <div class="product-image">
+      <img
+        src="{{ product.product_details.image.url }}"
+        alt="{{ product.product_details.image.title }}"
+      />
+    </div>
+    <div class="product-info">
+      <a href="{{ product.url }}">
+        <h5>{{ product.product_details.name }}</h5>
+      </a>
+      <h6>€{{ product.product_details.price }}</h6>
+    </div>
+  </div>
+</div>

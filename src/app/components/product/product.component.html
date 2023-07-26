@@ -1,0 +1,21 @@
+<div *ngIf="products" class="products-container">
+  <div class="blog-column-left">
+    <section class="product-section">
+      <div class="product-img-wrapper">
+        <img
+          src="{{ products.product_details?.image.url }}"
+          class="product-img"
+          alt="{{ products.product_details?.image.title }}"
+        />
+      </div>
+    </section>
+  </div>
+  <div class="product-description">
+    <h1 class="product-title">{{ products.title }}</h1>
+    <h2>Description</h2>
+    <div [innerHTML]="products.product_details?.description"></div>
+    <p>Rating: {{ products.custom }}</p>
+    <h4>SKU: {{ products.product_details?.sku[0].sku }}</h4>
+    <h6>€{{ products.product_details?.price }}</h6>
+  </div>
+</div>
